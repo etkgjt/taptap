@@ -6,7 +6,10 @@ import {
   StyleSheet
 } from 'react-native';
 export default function(){
+
     return (
-        <TouchableHighlight ></TouchableHighlight>
+        <TouchableHighlight>
+          <Text>{props.name}</Text>
+        </TouchableHighlight>
     )
 }

@@ -9,16 +9,19 @@ export default class Counter extends React.Component{
         super(props);
         this.state = {
             count :0,
-            isRunning : this.props.isRunning
+            //isRunning : false
         }
+        console.log(this.props.isRunning);
     }
-    componentDidMount(){
-        if(this.state.isRunning)
-        {
-            this.id = setInterval(()=>this.setState({count:this.state.count+1}),1000)
-        }
-        else
-            clearInterval(this.id);
-    }
-render = ()=><View>{this.props.children(this.state)}</View>
+    
+    
+        
+    
+render(){
+    console.log(this.props.isRunning);  
+    return (
+        <Text> {this.props.children(this.state)} </Text>
+    )
+}
+
 }
